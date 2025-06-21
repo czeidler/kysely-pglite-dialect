@@ -17,7 +17,6 @@ export class PGliteConnection implements DatabaseConnection {
     if (result.affectedRows) {
       const numAffectedRows = BigInt(result.affectedRows)
       return {
-        numUpdatedOrDeletedRows: numAffectedRows,
         numAffectedRows,
         rows: result.rows as O[],
       }
