@@ -14,7 +14,8 @@
   "scripts": {
     "build": "tsup",
     "typecheck": "tsc --noEmit",
-    "test": "ava"
+    "test": "ava",
+    "publish": "npm run build && npm publish"
   },
   "files": [
     "dist",
