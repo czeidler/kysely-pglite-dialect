@@ -4,7 +4,12 @@
 [![Test](https://github.com/czeidler/kysely-pglite-dialect/actions/workflows/test.yml/badge.svg)](https://github.com/czeidler/kysely-pglite-dialect/actions/workflows/test.yml)
 [![Build](https://github.com/czeidler/kysely-pglite-dialect/actions/workflows/build.yml/badge.svg)](https://github.com/czeidler/kysely-pglite-dialect/actions/workflows/build.yml)
 
-[Kysely](https://github.com/koskimas/kysely) dialect for [PGlite](https://pglite.dev/).
+Lightweight [Kysely](https://github.com/koskimas/kysely) dialect for [PGlite](https://pglite.dev/) with zero dependencies.
+
+Note, since PGlite is single user and only supports a single connection this library serializes multiple connections,
+i.e. acquiring a new connection will block till a previous connection is released.
+While this avoids multiple transactions from concurrently using (and messing up) the single PGlite connection, it can also lead to deadlocks that wouldn't occur on a normal Postgres instance.
+However, for the most common use-cases PGlite just works fine.
 
 ## Setup
 
