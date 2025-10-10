@@ -28,9 +28,18 @@ export class PGliteConnection implements DatabaseConnection {
   }
 
   async *streamQuery<O>(
-    _compiledQuery: CompiledQuery,
-    _chunkSize: number
+    compiledQuery: CompiledQuery,
+    chunkSize: number,
   ): AsyncIterableIterator<QueryResult<O>> {
-    throw new Error("PGLite Driver does not support streaming")
+    if (!Number.isInteger(chunkSize) || chunkSize <= 0) {
+      throw new Error("chunkSize must be a positive integer")
+    }
+    const result = await this.client.query(compiledQuery.sql, [
+      ...compiledQuery.parameters,
+    ])
+    for (let i = 0; i < result.rows.length; i = i + chunkSize) {
+      const chunk = result.rows.slice(i, i + chunkSize)
+      yield { rows: chunk as O[] }
+    }
   }
 }
