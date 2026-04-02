@@ -35,6 +35,8 @@ test.serial("should execute basic queries", async (t) => {
   t.deepEqual(result[0].data, "data1")
   t.deepEqual(result[1].data, "data2")
   t.deepEqual(result[2].data, "data3")
+
+  await db.destroy()
 })
 
 test.serial("should execute stream queries", async (t) => {
@@ -74,4 +76,6 @@ test.serial("should execute stream queries", async (t) => {
   t.deepEqual(result[2].data, "data3")
   t.deepEqual(result[3].data, "data4")
   t.deepEqual(result[4].data, "data5")
+
+  await db.destroy()
 })
