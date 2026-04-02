@@ -33,6 +33,29 @@ const db = new Kysely<{
 })
 ```
 
+# Changelog
+
+- 1.3.1
+  - Support PGlite 0.4
+  - Call PGlite.close() when destroying the Kysely driver
+  - Switch to pnpm
+  - Add changelog
+
+- 1.2.0
+  - Implement \*streamQuery
+
+- 1.1.2
+  - Support PGlite 0.3
+
+- 1.1.1
+  - Replace QueryResult.numUpdatedOrDeletedRows with `QueryResult.numAffectedRows
+
+- 1.0.5
+  - Support initialization with a PGliteWorker
+
+- 1.0.0
+  - Initial version
+
 # Development
 
 This project used pnpm so init the project with
