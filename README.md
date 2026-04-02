@@ -33,6 +33,12 @@ const db = new Kysely<{
 })
 ```
 
+# Development
+
+This project used pnpm so init the project with
+
+> pnpm i
+
 # Credits
 
 Thanks to [kysely-neon](https://github.com/seveibar/kysely-neon) which was used as a template for this repo.
