@@ -1,6 +1,6 @@
 {
   "name": "kysely-pglite-dialect",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "PGlite Dialect for Kysely",
   "author": "Clemens Zeidler",
   "license": "MIT",
