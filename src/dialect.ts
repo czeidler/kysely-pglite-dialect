@@ -102,6 +102,7 @@ class PGliteDriver implements Driver {
   }
 
   async destroy(): Promise<void> {
+    await this.client?.close()
     this.client = undefined
   }
 }
