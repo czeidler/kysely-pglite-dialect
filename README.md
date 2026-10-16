@@ -4,6 +4,9 @@
 [![Test](https://github.com/czeidler/kysely-pglite-dialect/actions/workflows/test.yml/badge.svg)](https://github.com/czeidler/kysely-pglite-dialect/actions/workflows/test.yml)
 [![Build](https://github.com/czeidler/kysely-pglite-dialect/actions/workflows/build.yml/badge.svg)](https://github.com/czeidler/kysely-pglite-dialect/actions/workflows/build.yml)
 
+**Deprecated** This library is not needed anymore.
+Use the buildin Kysely dialect instead: https://kysely-org.github.io/kysely-apidoc/classes/PGliteDialect.html
+
 Lightweight [Kysely](https://github.com/koskimas/kysely) dialect for [PGlite](https://pglite.dev/) with zero dependencies.
 
 Note, since PGlite is single user and only supports a single connection this library serializes multiple connections,
@@ -34,6 +37,10 @@ const db = new Kysely<{
 ```
 
 # Changelog
+
+- 1.4.0
+  - Support PGlite 0.5
+  - Deprecate this lib
 
 - 1.3.1
   - Support PGlite 0.4
