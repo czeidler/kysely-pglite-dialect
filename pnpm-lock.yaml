@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@electric-sql/pglite':
-        specifier: ^0.4.0
-        version: 0.4.2
+        specifier: ^0.5.0
+        version: 0.5.8
       '@types/node':
         specifier: ^22.14.0
         version: 22.19.15
@@ -35,8 +35,8 @@ importers:
 
 packages:
 
-  '@electric-sql/pglite@0.4.2':
-    resolution: {integrity: sha512-1GUUl/MZpy5QWgWisD3Epho3GkJrZ1MzVgQpo2pifQWUs96F9rXKZxeVLPhkwFYck34CH/kQ8lis6wX9ifn3kg==}
+  '@electric-sql/pglite@0.5.8':
+    resolution: {integrity: sha512-n9tsbUOhwx2epK1V0ZG9Ar4SHWUju04dhmzZXiSBXwBoleOvIfals33NAaWgagQVAL4Rbvx/Ptsu3P+pA09f6Q==}
 
   '@esbuild/aix-ppc64@0.27.5':
     resolution: {integrity: sha512-nGsF/4C7uzUj+Nj/4J+Zt0bYQ6bz33Phz8Lb2N80Mti1HjGclTJdXZ+9APC4kLvONbjxN1zfvYNd8FEcbBK/MQ==}
@@ -1183,7 +1183,7 @@ packages:
 
 snapshots:
 
-  '@electric-sql/pglite@0.4.2': {}
+  '@electric-sql/pglite@0.5.8': {}
 
   '@esbuild/aix-ppc64@0.27.5':
     optional: true
